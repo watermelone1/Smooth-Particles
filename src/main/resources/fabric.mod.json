@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "smoothparticles",
+  "version": "${version}",
+
+  "name": "Smooth Particles",
+  "description": "Adds smooth block placement particles",
+  "authors": [
+    "FatCactis"
+  ],
+  "contact": {
+    "homepage": "https://www.youtube.com/channel/UCsG82YBhw_0Wcv3yZeQ_q_A",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.FatCactis.smoothparticles.SmoothParticles"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
