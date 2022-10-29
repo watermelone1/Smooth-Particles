@@ -10,20 +10,23 @@
   ],
   "contact": {
     "homepage": "https://www.youtube.com/channel/UCsG82YBhw_0Wcv3yZeQ_q_A",
-    "sources": ""
+    "sources": "https://github.com/watermelone1/Smooth-Particles"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT Liscense",
+  "icon": "assets/smoothparticles/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.FatCactis.smoothparticles.SmoothParticles"
+    ],
+    "client": [
+      "net.FatCactis.smoothparticles.SmoothParticlesClient"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "smoothparticles.mixins.json"
   ],
 
   "depends": {
