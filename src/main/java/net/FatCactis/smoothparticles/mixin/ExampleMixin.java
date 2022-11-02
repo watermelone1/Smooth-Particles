@@ -20,55 +20,76 @@ import static net.minecraft.block.Blocks.*;
 
 @Mixin(Block.class)
 public class ExampleMixin {
+
+	BlockState bs;
+	BlockPos bp;
+	World w;
+
 	@Inject(at = @At("HEAD"), method = "onPlaced")
 	protected void spawnParticles(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack, CallbackInfo ci) {
-		spawnBlockParticles(SmoothParticles.STONE_PEBBLE, STONE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.GRANITE_PEBBLE, GRANITE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.GRANITE_PEBBLE, POLISHED_GRANITE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DIORITE_PEBBLE, DIORITE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DIORITE_PEBBLE, POLISHED_DIORITE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.ANDESITE_PEBBLE, ANDESITE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.ANDESITE_PEBBLE, POLISHED_ANDESITE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DEEPSLATE_PEBBLE, DEEPSLATE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DEEPSLATE_PEBBLE, COBBLED_DEEPSLATE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DEEPSLATE_PEBBLE, POLISHED_DEEPSLATE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.CALCITE_PEBBLE, CALCITE, state, world, pos);
-		spawnBlockParticles(SmoothParticles.TUFF_PEBBLE, TUFF, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DRIPSTONE_PEBBLE, DRIPSTONE_BLOCK, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, GRASS_BLOCK, 12, state, world, pos);
-		spawnBlockParticles(SmoothParticles.GRASS_PIECE, GRASS_BLOCK, 6, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, DIRT, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, COARSE_DIRT, 9, state, world, pos);
-		spawnBlockParticles(SmoothParticles.COARSE_DIRT_PEBBLE, COARSE_DIRT, 9, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, PODZOL, 9, state, world, pos);
-		spawnBlockParticles(SmoothParticles.COARSE_DIRT_PEBBLE, PODZOL, 9, state, world, pos);
-		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, ROOTED_DIRT, state, world, pos);
-		spawnBlockParticles(SmoothParticles.MUD_PIECE, MUD, state, world, pos);
-		spawnBlockParticles(SmoothParticles.NETHERRACK_PEBBLE, CRIMSON_NYLIUM, 12, state, world, pos);
-		spawnBlockParticles(SmoothParticles.CRIMSON_PIECE, CRIMSON_NYLIUM, 6, state, world, pos);
+		bs = state;
+		bp = pos;
+		w = world;
+
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+		spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360);
+
+		spawnBlockParticles(SmoothParticles.STONE_PEBBLE, STONE);
+		spawnBlockParticles(SmoothParticles.GRANITE_PEBBLE, GRANITE);
+		spawnBlockParticles(SmoothParticles.GRANITE_PEBBLE, POLISHED_GRANITE);
+		spawnBlockParticles(SmoothParticles.DIORITE_PEBBLE, DIORITE);
+		spawnBlockParticles(SmoothParticles.DIORITE_PEBBLE, POLISHED_DIORITE);
+		spawnBlockParticles(SmoothParticles.ANDESITE_PEBBLE, ANDESITE);
+		spawnBlockParticles(SmoothParticles.ANDESITE_PEBBLE, POLISHED_ANDESITE);
+		spawnBlockParticles(SmoothParticles.DEEPSLATE_PEBBLE, DEEPSLATE);
+		spawnBlockParticles(SmoothParticles.DEEPSLATE_PEBBLE, COBBLED_DEEPSLATE);
+		spawnBlockParticles(SmoothParticles.DEEPSLATE_PEBBLE, POLISHED_DEEPSLATE);
+		spawnBlockParticles(SmoothParticles.CALCITE_PEBBLE, CALCITE);
+		spawnBlockParticles(SmoothParticles.TUFF_PEBBLE, TUFF);
+		spawnBlockParticles(SmoothParticles.DRIPSTONE_PEBBLE, DRIPSTONE_BLOCK);
+		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, GRASS_BLOCK, 12);
+		spawnBlockParticles(SmoothParticles.GRASS_PIECE, GRASS_BLOCK, 6);
+		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, DIRT);
+		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, COARSE_DIRT, 9);
+		spawnBlockParticles(SmoothParticles.COARSE_DIRT_PEBBLE, COARSE_DIRT, 9);
+		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, PODZOL, 9);
+		spawnBlockParticles(SmoothParticles.COARSE_DIRT_PEBBLE, PODZOL, 9);
+		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, ROOTED_DIRT);
+		spawnBlockParticles(SmoothParticles.MUD_PIECE, MUD);
+		spawnBlockParticles(SmoothParticles.NETHERRACK_PEBBLE, CRIMSON_NYLIUM, 12);
+		spawnBlockParticles(SmoothParticles.CRIMSON_PIECE, CRIMSON_NYLIUM, 6);
+		spawnBlockParticles(SmoothParticles.NETHERRACK_PEBBLE, WARPED_NYLIUM, 6);
+		spawnBlockParticles(SmoothParticles.WARPED_PIECE, WARPED_NYLIUM, 6);
 
 
 	}
 
-	private void spawnBlockParticles(ParticleEffect particle, Block block, BlockState blockState,  World world, BlockPos pos) {
-		if(blockState.getBlock() == block) {
+	private void spawnBlockParticles(ParticleEffect particle, Block block) {
+		if(bs.getBlock() == block) {
 			for(int i = 0; i < 360; i++) {
 				if (i % 20 == 0) {
-					world.addParticle(particle,
-							pos.getX() + Math.random(), pos.getY() + Math.random(), pos.getZ() + Math.random(),
+					w.addParticle(particle,
+							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
 							Math.cos(i) * 0.25d, Math.sin(i) * 0.25d, Math.sin(i) * 0.25d);
 				}
 			}
 		}
 	}
 
-	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, BlockState blockState,  World world, BlockPos pos) {
-		if(blockState.getBlock() == block) {
+	private void spawnBlockParticles(ParticleEffect particle, Block block, int num) {
+		if(bs.getBlock() == block) {
 			for(int i = 0; i < 360; i++) {
 				if (i % 360/num == 0) {
-					world.addParticle(particle,
-							pos.getX() + Math.random(), pos.getY() + Math.random(), pos.getZ() + Math.random(),
-							Math.cos(i) * 0.25d, Math.sin(i) * 0.25d, Math.sin(i) * 0.25d);
+					w.addParticle(particle,
+							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
+							(Math.random() - 0.5) * 0.25d, (Math.random() - 0.5) * 0.25d, (Math.random() - 0.5) * 0.25d);
 				}
 			}
 		}

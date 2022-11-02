@@ -12,6 +12,12 @@ public class SmoothParticlesClient implements ClientModInitializer  {
     @Override
     public void onInitializeClient() {
 
+
+        //saul
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/saul"));
+        }));
+
         //green flame
         ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
             registry.register(new Identifier("smoothparticles", "particle/green_flame"));
@@ -117,7 +123,14 @@ public class SmoothParticlesClient implements ClientModInitializer  {
             registry.register(new Identifier("smoothparticles", "particle/crimson_piece"));
         }));
 
+        //warped piece
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/warped_piece"));
+        }));
+
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.GREEN_FLAME, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SAUL, FlameParticle.Factory::new);
+
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.ANGRY, EmotionParticle.AngryVillagerFactory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.CONDUIT, EnchantGlyphParticle.NautilusFactory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.ENCH_HIT, DamageParticle.EnchantedHitFactory::new);
@@ -139,6 +152,7 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.MUD_PIECE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.NETHERRACK_PEBBLE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.CRIMSON_PIECE, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.WARPED_PIECE, GravityBlock.Factory::new);
 
     }
 }
