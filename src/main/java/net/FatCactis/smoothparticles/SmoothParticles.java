@@ -39,6 +39,16 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType NETHERRACK_PEBBLE = FabricParticleTypes.simple();
 	public static final DefaultParticleType CRIMSON_PIECE = FabricParticleTypes.simple();
 	public static final DefaultParticleType WARPED_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType COBBLESTONE_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType OAK_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType SPRUCE_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType BIRCH_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType JUNGLE_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType ACACIA_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType DARK_OAK_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType MANGROVE_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType CRIMSON_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType WARPED_SPLINTER = FabricParticleTypes.simple();
 
 	@Override
 	public void onInitialize() {
@@ -67,6 +77,16 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "netherrack_pebble"), NETHERRACK_PEBBLE);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "crimson_piece"), CRIMSON_PIECE);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "warped_piece"), WARPED_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cobblestone_pebble"), COBBLESTONE_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "oak_splinter"), OAK_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "birch_splinter"),BIRCH_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "spruce_splinter"), SPRUCE_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "jungle_splinter"), JUNGLE_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "acacia_splinter"), ACACIA_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_oak_splinter"), DARK_OAK_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mangrove_splinter"), MANGROVE_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "crimson_splinter"), CRIMSON_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "warped_splinter"), WARPED_SPLINTER);
 
 	}
 }

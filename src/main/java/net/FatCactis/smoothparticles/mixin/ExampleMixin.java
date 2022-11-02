@@ -5,11 +5,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.particle.SoulParticle;
+import net.minecraft.client.util.math.Vector3d;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Position;
+import net.minecraft.util.math.Vector4f;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -67,7 +69,16 @@ public class ExampleMixin {
 		spawnBlockParticles(SmoothParticles.CRIMSON_PIECE, CRIMSON_NYLIUM, 6);
 		spawnBlockParticles(SmoothParticles.NETHERRACK_PEBBLE, WARPED_NYLIUM, 6);
 		spawnBlockParticles(SmoothParticles.WARPED_PIECE, WARPED_NYLIUM, 6);
-
+		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE, COBBLESTONE);
+		spawnBlockParticles(SmoothParticles.OAK_SPLINTER, OAK_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.SPRUCE_SPLINTER, SPRUCE_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.BIRCH_SPLINTER, BIRCH_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.JUNGLE_SPLINTER, JUNGLE_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.ACACIA_SPLINTER, ACACIA_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.DARK_OAK_SPLINTER, DARK_OAK_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.MANGROVE_SPLINTER, MANGROVE_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.CRIMSON_SPLINTER, CRIMSON_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
+		spawnBlockParticles(SmoothParticles.WARPED_SPLINTER, WARPED_PLANKS, 30, new Vector3d(0.65, 0.65, 0.65));
 
 	}
 
@@ -90,6 +101,30 @@ public class ExampleMixin {
 					w.addParticle(particle,
 							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
 							(Math.random() - 0.5) * 0.25d, (Math.random() - 0.5) * 0.25d, (Math.random() - 0.5) * 0.25d);
+				}
+			}
+		}
+	}
+
+	private void spawnBlockParticles(ParticleEffect particle, Block block, Vector3d vector3d) {
+		if(bs.getBlock() == block) {
+			for(int i = 0; i < 360; i++) {
+				if (i % 20 == 0) {
+					w.addParticle(particle,
+							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
+							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
+				}
+			}
+		}
+	}
+
+	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, Vector3d vector3d) {
+		if(bs.getBlock() == block) {
+			for(int i = 0; i < 360; i++) {
+				if (i % 360/num == 0) {
+					w.addParticle(particle,
+							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
+							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
 				}
 			}
 		}
