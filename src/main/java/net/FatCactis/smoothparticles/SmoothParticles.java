@@ -2,9 +2,7 @@ package net.FatCactis.smoothparticles;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.minecraft.client.particle.Particle;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
@@ -49,6 +47,25 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType MANGROVE_SPLINTER = FabricParticleTypes.simple();
 	public static final DefaultParticleType CRIMSON_SPLINTER = FabricParticleTypes.simple();
 	public static final DefaultParticleType WARPED_SPLINTER = FabricParticleTypes.simple();
+	public static final DefaultParticleType BEDROCK_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType SAND_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType RED_SAND_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType GRAVEL_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType COAL_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType RAW_IRON_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType COPPER_PEBBLE_ORANGE = FabricParticleTypes.simple();
+	public static final DefaultParticleType COPPER_PEBBLE_ORANGE_GREEN = FabricParticleTypes.simple();
+	public static final DefaultParticleType COPPER_PEBBLE_GREEN = FabricParticleTypes.simple();
+	public static final DefaultParticleType GOLD_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType REDSTONE_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType EMERALD_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType LAPIS_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType DIAMOND_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType QUARTZ_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType DEBRIS_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType AMETHYST_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType IRON_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType NETHERITE_PEBBLE = FabricParticleTypes.simple();
 
 	@Override
 	public void onInitialize() {
@@ -87,6 +104,25 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mangrove_splinter"), MANGROVE_SPLINTER);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "crimson_splinter"), CRIMSON_SPLINTER);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "warped_splinter"), WARPED_SPLINTER);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "bedrock_pebble"), BEDROCK_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "sand_piece"), SAND_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "red_sand_piece"), RED_SAND_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "gravel_piece"), GRAVEL_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "coal_pebble"), COAL_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "raw_iron_pebble"), RAW_IRON_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "copper_pebble_orange"), COPPER_PEBBLE_ORANGE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "copper_pebble_orange_green"), COPPER_PEBBLE_ORANGE_GREEN);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "copper_pebble_green"), COPPER_PEBBLE_GREEN);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "gold_pebble"), GOLD_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "redstone_pebble"), REDSTONE_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "emerald_pebble"), EMERALD_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "lapis_pebble"), LAPIS_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "diamond_pebble"), DIAMOND_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "quartz_pebble"), QUARTZ_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "debris_pebble"), DEBRIS_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "amethyst_pebble"), AMETHYST_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "iron_pebble"), IRON_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "netherite_pebble"), NETHERITE_PEBBLE);
 
 	}
 }
