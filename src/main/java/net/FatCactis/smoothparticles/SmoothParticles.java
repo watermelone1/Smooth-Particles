@@ -5,12 +5,9 @@ import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class SmoothParticles implements ModInitializer {
 	public static final String MOD_ID = "smoothparticles";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	public static final DefaultParticleType SAUL = FabricParticleTypes.simple();
 
@@ -66,6 +63,16 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType AMETHYST_PEBBLE = FabricParticleTypes.simple();
 	public static final DefaultParticleType IRON_PEBBLE = FabricParticleTypes.simple();
 	public static final DefaultParticleType NETHERITE_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType OAK_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType BIRCH_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType SPRUCE_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType JUNGLE_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType ACACIA_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType DARK_OAK_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType MANGROVE_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType CRIMSON_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType WARPED_BARK = FabricParticleTypes.simple();
+
 
 	@Override
 	public void onInitialize() {
@@ -123,6 +130,14 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "amethyst_pebble"), AMETHYST_PEBBLE);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "iron_pebble"), IRON_PEBBLE);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "netherite_pebble"), NETHERITE_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "oak_bark"), OAK_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "birch_bark"), BIRCH_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "jungle_bark"), JUNGLE_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "acacia_bark"), ACACIA_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_oak_bark"), DARK_OAK_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mangrove_bark"), MANGROVE_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "crimson_bark"), CRIMSON_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "warped_bark"), WARPED_BARK);
 
 	}
 }

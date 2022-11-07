@@ -2,18 +2,9 @@ package net.FatCactis.smoothparticles;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.FallingBlock;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.particle.*;
-import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import org.jetbrains.annotations.Nullable;
 
 public class GravityBlock extends SpriteBillboardParticle {
     protected GravityBlock(ClientWorld level, double xCoord, double yCoord, double zCoord,
@@ -41,7 +32,7 @@ public class GravityBlock extends SpriteBillboardParticle {
     }
 
     private void fadeOut() {
-        this.angle = age/60;
+        this.angle = ((float) age)/60;
     }
 
     private void move() {

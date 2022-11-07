@@ -268,6 +268,51 @@ public class SmoothParticlesClient implements ClientModInitializer  {
             registry.register(new Identifier("smoothparticles", "particle/netherite_pebble"));
         }));
 
+        //oak bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/oak_bark"));
+        }));
+
+        //birch bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/birch_bark"));
+        }));
+
+        //birch bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/spruce_bark"));
+        }));
+
+        //jungkle bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/jungle_bark"));
+        }));
+
+        //acacia bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/acacia_bark"));
+        }));
+
+        //dark oak bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/dark_oak_bark"));
+        }));
+
+        //dark oak bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/mangrove_bark"));
+        }));
+
+        //crimson bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/crimson_bark"));
+        }));
+
+        //warped bark
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/warped_bark"));
+        }));
+
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.GREEN_FLAME, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SAUL, FlameParticle.Factory::new);
 
@@ -322,6 +367,14 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.AMETHYST_PEBBLE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.IRON_PEBBLE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.NETHERITE_PEBBLE, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_BARK, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPRUCE_BARK, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.JUNGLE_BARK, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.ACACIA_BARK, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.DARK_OAK_BARK, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.MANGROVE_BARK, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.CRIMSON_BARK, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.WARPED_BARK, GravityBlock.Factory::new);
 
     }
 }
