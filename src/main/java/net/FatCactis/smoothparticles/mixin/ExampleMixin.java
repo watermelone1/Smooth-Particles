@@ -191,6 +191,7 @@ public class ExampleMixin {
 		spawnBlockParticles(SmoothParticles.WARPED_SPLINTER, WARPED_STEM, 15);
 		spawnBlockParticles(SmoothParticles.OAK_SPLINTER, STRIPPED_OAK_LOG);
 		spawnBlockParticles(SmoothParticles.BIRCH_SPLINTER, STRIPPED_BIRCH_LOG);
+		spawnBlockParticles(SmoothParticles.SPRUCE_SPLINTER, STRIPPED_SPRUCE_LOG);
 		spawnBlockParticles(SmoothParticles.JUNGLE_SPLINTER, STRIPPED_JUNGLE_LOG);
 		spawnBlockParticles(SmoothParticles.ACACIA_SPLINTER, STRIPPED_ACACIA_LOG);
 		spawnBlockParticles(SmoothParticles.DARK_OAK_SPLINTER, STRIPPED_DARK_OAK_LOG);
@@ -199,6 +200,7 @@ public class ExampleMixin {
 		spawnBlockParticles(SmoothParticles.WARPED_SPLINTER, STRIPPED_WARPED_STEM);
 		spawnBlockParticles(SmoothParticles.OAK_SPLINTER, STRIPPED_OAK_WOOD);
 		spawnBlockParticles(SmoothParticles.BIRCH_SPLINTER, STRIPPED_BIRCH_WOOD);
+		spawnBlockParticles(SmoothParticles.SPRUCE_SPLINTER, STRIPPED_SPRUCE_WOOD);
 		spawnBlockParticles(SmoothParticles.JUNGLE_SPLINTER, STRIPPED_JUNGLE_WOOD);
 		spawnBlockParticles(SmoothParticles.ACACIA_SPLINTER, STRIPPED_ACACIA_WOOD);
 		spawnBlockParticles(SmoothParticles.DARK_OAK_SPLINTER, STRIPPED_DARK_OAK_WOOD);

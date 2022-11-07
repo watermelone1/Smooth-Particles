@@ -132,6 +132,7 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "netherite_pebble"), NETHERITE_PEBBLE);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "oak_bark"), OAK_BARK);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "birch_bark"), BIRCH_BARK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "spruce_bark"), SPRUCE_BARK);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "jungle_bark"), JUNGLE_BARK);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "acacia_bark"), ACACIA_BARK);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_oak_bark"), DARK_OAK_BARK);

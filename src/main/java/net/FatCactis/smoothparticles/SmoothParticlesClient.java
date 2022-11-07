@@ -367,6 +367,7 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.AMETHYST_PEBBLE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.IRON_PEBBLE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.NETHERITE_PEBBLE, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.OAK_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPRUCE_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.JUNGLE_BARK, GravityBlock.Factory::new);
