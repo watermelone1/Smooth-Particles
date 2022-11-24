@@ -313,6 +313,146 @@ public class SmoothParticlesClient implements ClientModInitializer  {
             registry.register(new Identifier("smoothparticles", "particle/warped_bark"));
         }));
 
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/warped_bark"));
+        }));
+
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/birch_leaf"));
+        }));
+
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/spruce_leaf"));
+        }));
+
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/jungle_leaf"));
+        }));
+
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/acacia_leaf"));
+        }));
+
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/dark_oak_leaf"));
+        }));
+
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/mangrove_leaf"));
+        }));
+
+        //oak leaf
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/azalea_leaf"));
+        }));
+
+        //sponge
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/sponge_piece"));
+        }));
+
+        //sandstone
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/glass_shard"));
+        }));
+
+        //sponge
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/sandstone_pebble"));
+        }));
+
+        //cobweb
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/cobweb"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/red_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/yellow_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/orange_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/magenta_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/light_blue_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/lime_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/pink_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/gray_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/light_gray_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/cyan_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/purple_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/blue_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/brown_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/green_string"));
+        }));
+
+        //string
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/black_string"));
+        }));
+
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.GREEN_FLAME, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SAUL, FlameParticle.Factory::new);
 
@@ -376,6 +516,33 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.MANGROVE_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.CRIMSON_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.WARPED_BARK, GravityBlock.Factory::new);
-
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.OAK_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPRUCE_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.JUNGLE_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.ACACIA_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.DARK_OAK_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.MANGROVE_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.AZALEA_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPONGE_PIECE, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.GLASS_SHARD, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SANDSTONE_PEBBLE, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.COBWEB, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.RED_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.YELLOW_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.ORANGE_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.MAGENTA_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.LIGHT_BLUE_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.LIME_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.PINK_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.GRAY_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.LIGHT_GRAY_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.CYAN_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.PURPLE_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BLUE_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BROWN_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.GREEN_STRING, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BLACK_STRING, GravityBlock.Factory::new);
     }
 }

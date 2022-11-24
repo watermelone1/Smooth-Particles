@@ -8,6 +8,7 @@ import net.minecraft.client.util.math.Vector3d;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -216,6 +217,41 @@ public class ExampleMixin {
 		spawnBlockParticles(SmoothParticles.MANGROVE_BARK, MANGROVE_WOOD);
 		spawnBlockParticles(SmoothParticles.CRIMSON_BARK, CRIMSON_HYPHAE);
 		spawnBlockParticles(SmoothParticles.WARPED_BARK, WARPED_HYPHAE);
+		spawnBlockParticles(SmoothParticles.OAK_LEAF, OAK_LEAVES);
+		spawnBlockParticles(SmoothParticles.BIRCH_LEAF, BIRCH_LEAVES);
+		spawnBlockParticles(SmoothParticles.SPRUCE_LEAF, SPRUCE_LEAVES);
+		spawnBlockParticles(SmoothParticles.JUNGLE_LEAF, JUNGLE_LEAVES);
+		spawnBlockParticles(SmoothParticles.ACACIA_LEAF, ACACIA_LEAVES);
+		spawnBlockParticles(SmoothParticles.DARK_OAK_LEAF, DARK_OAK_LEAVES);
+		spawnBlockParticles(SmoothParticles.MANGROVE_LEAF, MANGROVE_LEAVES);
+		spawnBlockParticles(SmoothParticles.AZALEA_LEAF, AZALEA_LEAVES);
+		spawnBlockParticles(SmoothParticles.AZALEA_LEAF, FLOWERING_AZALEA_LEAVES);
+		spawnBlockParticles(SmoothParticles.SPONGE_PIECE, SPONGE);
+		spawnBlockParticles(SmoothParticles.SPONGE_PIECE, WET_SPONGE);
+		wetSpongeParticle();
+		spawnBlockParticles(SmoothParticles.GLASS_SHARD, GLASS);
+		spawnBlockParticles(SmoothParticles.GLASS_SHARD, TINTED_GLASS);
+		spawnBlockParticles(SmoothParticles.LAPIS_PEBBLE, LAPIS_BLOCK);
+		spawnBlockParticles(SmoothParticles.SAND_PIECE, SANDSTONE);
+		spawnBlockParticles(SmoothParticles.SAND_PIECE, CHISELED_SANDSTONE);
+		spawnBlockParticles(SmoothParticles.SAND_PIECE, CUT_SANDSTONE);
+		spawnBlockParticles(SmoothParticles.COBWEB, COBWEB);
+		spawnBlockParticles(SmoothParticles.STRING, WHITE_WOOL);
+		spawnBlockParticles(SmoothParticles.RED_STRING, RED_WOOL);
+		spawnBlockParticles(SmoothParticles.YELLOW_STRING, YELLOW_WOOL);
+		spawnBlockParticles(SmoothParticles.ORANGE_STRING, ORANGE_WOOL);
+		spawnBlockParticles(SmoothParticles.MAGENTA_STRING, MAGENTA_WOOL);
+		spawnBlockParticles(SmoothParticles.LIGHT_BLUE_STRING, LIGHT_BLUE_WOOL);
+		spawnBlockParticles(SmoothParticles.LIME_STRING, LIME_WOOL);
+		spawnBlockParticles(SmoothParticles.PINK_STRING, PINK_WOOL);
+		spawnBlockParticles(SmoothParticles.GRAY_STRING, GRAY_WOOL);
+		spawnBlockParticles(SmoothParticles.LIGHT_GRAY_STRING, LIGHT_GRAY_WOOL);
+		spawnBlockParticles(SmoothParticles.CYAN_STRING, CYAN_WOOL);
+		spawnBlockParticles(SmoothParticles.PURPLE_STRING, PURPLE_WOOL);
+		spawnBlockParticles(SmoothParticles.BLUE_STRING, BLUE_WOOL);
+		spawnBlockParticles(SmoothParticles.BROWN_STRING, BROWN_WOOL);
+		spawnBlockParticles(SmoothParticles.GREEN_STRING, GREEN_WOOL);
+		spawnBlockParticles(SmoothParticles.BLACK_STRING, BLACK_WOOL);
 
 	}
 
@@ -226,6 +262,16 @@ public class ExampleMixin {
 					w.addParticle(particle,
 							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
 							Math.cos(i) * 0.25d, Math.sin(i) * 0.25d, Math.sin(i) * 0.25d);
+				}
+			}
+		}
+	}
+
+	private void wetSpongeParticle() {
+		if(bs.getBlock() == WET_SPONGE) {
+			for(int i = 0; i < 360; i++) {
+				if (i % 40 == 0) {
+					w.addParticle(ParticleTypes.DRIPPING_WATER, bp.getX(), bp.getY(), bp.getZ(), Math.cos(i) * 0.25d, Math.sin(i) * 0.25d, Math.sin(i) * 0.25d);
 				}
 			}
 		}

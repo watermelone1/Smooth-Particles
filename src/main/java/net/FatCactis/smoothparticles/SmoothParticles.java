@@ -72,6 +72,34 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType MANGROVE_BARK = FabricParticleTypes.simple();
 	public static final DefaultParticleType CRIMSON_BARK = FabricParticleTypes.simple();
 	public static final DefaultParticleType WARPED_BARK = FabricParticleTypes.simple();
+	public static final DefaultParticleType OAK_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType BIRCH_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType SPRUCE_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType JUNGLE_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType ACACIA_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType DARK_OAK_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType MANGROVE_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType AZALEA_LEAF = FabricParticleTypes.simple();
+	public static final DefaultParticleType SPONGE_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType GLASS_SHARD = FabricParticleTypes.simple();
+	public static final DefaultParticleType SANDSTONE_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType COBWEB = FabricParticleTypes.simple();
+	public static final DefaultParticleType STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType RED_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType YELLOW_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType ORANGE_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType MAGENTA_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType LIGHT_BLUE_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType LIME_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType PINK_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType GRAY_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType LIGHT_GRAY_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType CYAN_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType PURPLE_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType BLUE_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType BROWN_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType GREEN_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType BLACK_STRING = FabricParticleTypes.simple();
 
 
 	@Override
@@ -139,6 +167,33 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mangrove_bark"), MANGROVE_BARK);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "crimson_bark"), CRIMSON_BARK);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "warped_bark"), WARPED_BARK);
-
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "oak_leaf"), OAK_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "birch_leaf"), BIRCH_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "spruce_leaf"), SPRUCE_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "jungle_leaf"), JUNGLE_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "acacia_leaf"), ACACIA_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_oak_leaf"), DARK_OAK_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mangrove_leaf"), MANGROVE_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "azalea_leaf"), AZALEA_LEAF);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "sponge_piece"), SPONGE_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "glass_shard"), GLASS_SHARD);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "sandstone_pebble"), SANDSTONE_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cobweb"), COBWEB);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "string"), STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "red_string"), RED_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "yellow_string"), YELLOW_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "orange_string"), ORANGE_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "magenta_string"), MAGENTA_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "light_blue_string"), LIGHT_BLUE_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "lime_string"), LIME_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "pink_string"), PINK_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "gray_string"), GRAY_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "light_gray_string"), LIGHT_GRAY_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cyan_string"), CYAN_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "purple_string"), PURPLE_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "blue_string"), BLUE_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "brown_string"), BROWN_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "green_string"), GREEN_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "black_string"), BLACK_STRING);
 	}
 }
