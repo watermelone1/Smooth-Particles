@@ -100,6 +100,25 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType BROWN_STRING = FabricParticleTypes.simple();
 	public static final DefaultParticleType GREEN_STRING = FabricParticleTypes.simple();
 	public static final DefaultParticleType BLACK_STRING = FabricParticleTypes.simple();
+	public static final DefaultParticleType SMOOTH_STONE_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType BRICK = FabricParticleTypes.simple();
+	public static final DefaultParticleType MUD_BRICK = FabricParticleTypes.simple();
+	public static final DefaultParticleType NETHER_BRICK = FabricParticleTypes.simple();
+	public static final DefaultParticleType PURPUR_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType PRISMARINE_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType DARK_PRISMARINE_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType END_STONE_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType RED_NETHER_BRICK = FabricParticleTypes.simple();
+	public static final DefaultParticleType BLACKSTONE_PEBBLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType HONEYCOMB = FabricParticleTypes.simple();
+	public static final DefaultParticleType ICE_CUBE = FabricParticleTypes.simple();
+	public static final DefaultParticleType SNOWBALL = FabricParticleTypes.simple();
+	public static final DefaultParticleType SLIMEBALL = FabricParticleTypes.simple();
+	public static final DefaultParticleType CLAY_BALL = FabricParticleTypes.simple();
+	public static final DefaultParticleType JUKEBOX = FabricParticleTypes.simple();
+	public static final DefaultParticleType PUMPKIN = FabricParticleTypes.simple();
+	public static final DefaultParticleType BASALT = FabricParticleTypes.simple();
+	public static final DefaultParticleType SMOOTH_BASALT = FabricParticleTypes.simple();
 
 
 	@Override
@@ -195,5 +214,24 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "brown_string"), BROWN_STRING);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "green_string"), GREEN_STRING);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "black_string"), BLACK_STRING);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "smooth_stone_pebble"), SMOOTH_STONE_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "brick"), BRICK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mud_brick"), MUD_BRICK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "nether_brick"), NETHER_BRICK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "purpur_piece"), PURPUR_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "prismarine_piece"), PRISMARINE_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_prismarine_piece"), DARK_PRISMARINE_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "end_stone_piece"), END_STONE_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "red_nether_brick"), RED_NETHER_BRICK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "blackstone_pebble"), BLACKSTONE_PEBBLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "honeycomb"), HONEYCOMB);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "ice_cube"), ICE_CUBE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "snowball"), SNOWBALL);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "slimeball"), SLIMEBALL);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "clay_ball"), CLAY_BALL);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "jukebox"), JUKEBOX);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "pumpkin"), PUMPKIN);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "basalt"), BASALT);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "smooth_basalt"), SMOOTH_BASALT);
 	}
 }
