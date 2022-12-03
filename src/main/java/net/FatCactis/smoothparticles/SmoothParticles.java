@@ -119,7 +119,46 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType PUMPKIN = FabricParticleTypes.simple();
 	public static final DefaultParticleType BASALT = FabricParticleTypes.simple();
 	public static final DefaultParticleType SMOOTH_BASALT = FabricParticleTypes.simple();
+	public static final DefaultParticleType BRIGHT_GLOWSTONE = FabricParticleTypes.simple();
+	public static final DefaultParticleType DARK_GLOWSTONE = FabricParticleTypes.simple();
+	public static final DefaultParticleType PACKED_MUD = FabricParticleTypes.simple();
+	public static final DefaultParticleType BROWN_MUSHROOM = FabricParticleTypes.simple();
+	public static final DefaultParticleType RED_MUSHROOM = FabricParticleTypes.simple();
+	public static final DefaultParticleType MUSHROOM_STEM = FabricParticleTypes.simple();
+	public static final DefaultParticleType MYCELIUM = FabricParticleTypes.simple();
+	public static final DefaultParticleType SCULK_BLOCK = FabricParticleTypes.simple();
+	public static final DefaultParticleType BONE_BLOCK = FabricParticleTypes.simple();
+	public static final DefaultParticleType WHITE_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType ORANGE_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType MAGENTA_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType LIGHT_BLUE_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType YELLOW_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType LIME_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType PINK_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType GRAY_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType LIGHT_GRAY_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType CYAN_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType PURPLE_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType BROWN_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType BLUE_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType GREEN_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType RED_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType BLACK_TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType HAY_BALE = FabricParticleTypes.simple();
+	public static final DefaultParticleType TERRACOTTA = FabricParticleTypes.simple();
+	public static final DefaultParticleType EIGHTH_NOTE = FabricParticleTypes.simple();
+	public static final DefaultParticleType BEAMED_EIGHTH_NOTE = FabricParticleTypes.simple();
+	public static final DefaultParticleType WHOLE_NOTE = FabricParticleTypes.simple();
+	public static final DefaultParticleType HALF_NOTE = FabricParticleTypes.simple();
+	public static final DefaultParticleType QUARTER_NOTE = FabricParticleTypes.simple();
+	public static final DefaultParticleType DRIED_KELP = FabricParticleTypes.simple();
+	public static final DefaultParticleType SHROOMLIGHT = FabricParticleTypes.simple();
+	public static final DefaultParticleType FROGLIGHT_MIDDLE = FabricParticleTypes.simple();
+	public static final DefaultParticleType OCHRE_FROGLIGHT = FabricParticleTypes.simple();
+	public static final DefaultParticleType VERDANT_FROGLIGHT = FabricParticleTypes.simple();
+	public static final DefaultParticleType PEARLESCENT_FROGLIGHT = FabricParticleTypes.simple();
 
+	public static void scrollpointdontworry() {}
 
 	@Override
 	public void onInitialize() {
@@ -233,5 +272,45 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "pumpkin"), PUMPKIN);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "basalt"), BASALT);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "smooth_basalt"), SMOOTH_BASALT);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "bright_glowstone"), BRIGHT_GLOWSTONE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "dark_glowstone"), DARK_GLOWSTONE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "packed_mud"), PACKED_MUD);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "brown_mushroom"), BROWN_MUSHROOM);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "red_mushroom"), RED_MUSHROOM);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mushroom_stem"), MUSHROOM_STEM);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "mycelium"), MYCELIUM);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "sculk_block"), SCULK_BLOCK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "bone_block"), BONE_BLOCK);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "white_terracotta"), WHITE_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "orange_terracotta"), ORANGE_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "magenta_terracotta"), MAGENTA_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "light_blue_terracotta"), LIGHT_BLUE_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "yellow_terracotta"), YELLOW_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "lime_terracotta"), LIME_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "pink_terracotta"), PINK_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "gray_terracotta"), GRAY_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "light_gray_terracotta"), LIGHT_GRAY_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cyan_terracotta"), CYAN_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "purple_terracotta"), PURPLE_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "brown_terracotta"), BROWN_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "blue_terracotta"), BLUE_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "green_terracotta"), GREEN_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "red_terracotta"), RED_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "black_terracotta"), BLACK_TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "hay_bale"), HAY_BALE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "terracotta"), TERRACOTTA);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "eighth_note"), EIGHTH_NOTE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "beamed_eighth_note"), BEAMED_EIGHTH_NOTE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "whole_note"), WHOLE_NOTE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "half_note"), HALF_NOTE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "quarter_note"), QUARTER_NOTE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "dried_kelp"), DRIED_KELP);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "shroomlight"), SHROOMLIGHT);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "froglight_middle"), FROGLIGHT_MIDDLE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "ochre_froglight"), OCHRE_FROGLIGHT);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "verdant_froglight"), VERDANT_FROGLIGHT);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "pearlescent_froglight"), PEARLESCENT_FROGLIGHT);
+
+		scrollpointdontworry();
 	}
 }
