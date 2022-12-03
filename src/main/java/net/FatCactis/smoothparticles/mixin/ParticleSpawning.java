@@ -22,7 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import static net.minecraft.block.Blocks.*;
 
 @Mixin(Block.class)
-public class ExampleMixin {
+public class ParticleSpawning {
 
 	BlockState bs;
 	BlockPos bp;

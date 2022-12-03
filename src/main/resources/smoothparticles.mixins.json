@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "ParticleSpawning"
   ],
   "injectors": {
     "defaultRequire": 1

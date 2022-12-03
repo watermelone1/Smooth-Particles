@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Smooth Particles",
-  "description": "Adds smooth block placement particles",
+  "description": "Adds block placement particles",
   "authors": [
     "FatCactis"
   ],
