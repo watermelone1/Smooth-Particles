@@ -30,6 +30,28 @@ public class GravityBlock extends SpriteBillboardParticle {
 
     }
 
+    protected GravityBlock(ClientWorld level, double xCoord, double yCoord, double zCoord,
+                           SpriteProvider spriteSet, double xd, double yd, double zd, float scale) {
+        super(level, xCoord, yCoord, zCoord, xd, yd, zd);
+
+        this.velocityMultiplier = 0.9F;
+        this.x = xd * 1.25;
+        this.y = yd * 1.25;
+        this.z = zd * 1.25;
+        this.scale *= 0.75F;
+        this.maxAge = 25;
+        this.setSpriteForAge(spriteSet);
+        this.scale = 0.5F;
+
+        this.red = 1f;
+        this.green = 1f;
+        this.blue = 1f;
+
+        this.rotationDirection = Math2.getRandomInt(1, 2, -1, -2);
+        //dont worry about this stupid
+
+    }
+
     @Override
     public void tick() {
         super.tick();
@@ -63,6 +85,10 @@ public class GravityBlock extends SpriteBillboardParticle {
         return (t/=d)*t;
     }
 
+    public void setScale (float scale) {
+        this.scale = scale;
+    }
+
     @Override
     public ParticleTextureSheet getType() {
         return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
@@ -79,6 +105,11 @@ public class GravityBlock extends SpriteBillboardParticle {
         public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
                                        double dx, double dy, double dz) {
             return new GravityBlock(level, x, y, z, this.sprites, dx, dy, dz);
+        }
+
+        public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
+                                       double dx, double dy, double dz, float scale) {
+            return new GravityBlock(level, x, y, z, this.sprites, dx, dy, dz, scale);
         }
     }
 }

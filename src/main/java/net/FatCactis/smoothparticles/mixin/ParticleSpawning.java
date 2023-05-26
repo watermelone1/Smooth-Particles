@@ -1,5 +1,6 @@
 package net.FatCactis.smoothparticles.mixin;
 
+import net.FatCactis.smoothparticles.GravityBlock;
 import net.FatCactis.smoothparticles.RandomMathStuffThatsCompletelyUselessAndIFeelLikeDyingBecauseIDontWantToCodeMoreParticlesAndDoUselessStuffThatWillTakeForeverAndImJustGoingToMakeAnotherClassThatExtendsThisOneJustBecauseIDontWantToTypeThisOutAndThisIsATerribleIdeaButIDontCare.Math2;
 import net.FatCactis.smoothparticles.SmoothParticles;
 import net.minecraft.block.Block;
@@ -30,13 +31,16 @@ public class ParticleSpawning {
 
 	@Inject(at = @At("HEAD"), method = "onPlaced")
 	protected void spawnParticles(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack, CallbackInfo ci) {
+
+
+
+
 		bs = state;
 		bp = pos;
 		w = world;
-
-			for (double i = 0; i < 10; i += 0.05) {
+		/*for (double i = 0; i < 10; i += 0.05) {
 				spawnBlockParticles(SmoothParticles.SAUL, JIGSAW, 360, new Vector3d(i, i, i));
-			}
+		}*/
 
 		spawnBlockParticles(SmoothParticles.STONE_PEBBLE, STONE);
 		spawnBlockParticles(SmoothParticles.GRANITE_PEBBLE, GRANITE);
@@ -635,6 +639,15 @@ public class ParticleSpawning {
 		}
 	}
 
+	private void spawnBlockParticles(ParticleEffect particle, Block block, float scale) {
+		if (bs.getBlock() == block) {
+			GravityBlock gb = ((GravityBlock) particle);
+			gb.setScale(scale);
+			particle = ((ParticleEffect) gb);
+		}
+		spawnBlockParticles(particle, block);
+	}
+
 	private void wetSpongeParticle() {
 		if(bs.getBlock() == WET_SPONGE) {
 			for(int i = 0; i < 360; i++) {
@@ -657,6 +670,17 @@ public class ParticleSpawning {
 		}
 	}
 
+	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, float scale) {
+		if (bs.getBlock() == block) {
+			GravityBlock gb = ((GravityBlock) particle);
+			gb.setScale(scale);
+			particle = ((ParticleEffect) gb);
+		}
+
+
+		spawnBlockParticles(particle, block, num);
+	}
+
 	private void spawnBlockParticles(ParticleEffect particle, Block block, Vector3d vector3d) {
 		if(bs.getBlock() == block) {
 			for(int i = 0; i < 360; i++) {
@@ -674,6 +698,19 @@ public class ParticleSpawning {
 			for(int i = 0; i < 360; i++) {
 				if (i % 360/num == 0) {
 					w.addParticle(particle,
+							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
+							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
+				}
+			}
+		}
+	}
+	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, Vector3d vector3d, float scale) {
+		GravityBlock gb = (GravityBlock) particle;
+		gb.setScale(0.5F);
+		if(bs.getBlock() == block) {
+			for(int i = 0; i < 360; i++) {
+				if (i % 360/num == 0) {
+					w.addParticle((ParticleEffect) gb,
 							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
 							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
 				}
