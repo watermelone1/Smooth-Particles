@@ -12,10 +12,21 @@ public class SmoothParticlesClient implements ClientModInitializer  {
     @Override
     public void onInitializeClient() {
 
-
         //saul
         ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
             registry.register(new Identifier("smoothparticles", "particle/saul"));
+        }));
+
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/cobblestone_pebble1"));
+        }));
+
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/cobblestone_pebble2"));
+        }));
+
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> {
+            registry.register(new Identifier("smoothparticles", "particle/cobblestone_pebble3"));
         }));
 
         //green flame
@@ -765,7 +776,9 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.NETHERRACK_PEBBLE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.CRIMSON_PIECE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.WARPED_PIECE, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.COBBLESTONE_PIECE, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.COBBLESTONE_PIECE1, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.COBBLESTONE_PIECE2, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.COBBLESTONE_PIECE3, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.OAK_SPLINTER, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPRUCE_SPLINTER, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_SPLINTER, GravityBlock.Factory::new);

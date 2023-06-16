@@ -34,7 +34,9 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType NETHERRACK_PEBBLE = FabricParticleTypes.simple();
 	public static final DefaultParticleType CRIMSON_PIECE = FabricParticleTypes.simple();
 	public static final DefaultParticleType WARPED_PIECE = FabricParticleTypes.simple();
-	public static final DefaultParticleType COBBLESTONE_PIECE = FabricParticleTypes.simple();
+	public static final DefaultParticleType COBBLESTONE_PIECE1 = FabricParticleTypes.simple();
+	public static final DefaultParticleType COBBLESTONE_PIECE2 = FabricParticleTypes.simple();
+	public static final DefaultParticleType COBBLESTONE_PIECE3 = FabricParticleTypes.simple();
 	public static final DefaultParticleType OAK_SPLINTER = FabricParticleTypes.simple();
 	public static final DefaultParticleType SPRUCE_SPLINTER = FabricParticleTypes.simple();
 	public static final DefaultParticleType BIRCH_SPLINTER = FabricParticleTypes.simple();
@@ -187,7 +189,9 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "netherrack_pebble"), NETHERRACK_PEBBLE);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "crimson_piece"), CRIMSON_PIECE);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "warped_piece"), WARPED_PIECE);
-		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cobblestone_pebble"), COBBLESTONE_PIECE);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cobblestone_pebble1"), COBBLESTONE_PIECE1);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cobblestone_pebble2"), COBBLESTONE_PIECE2);
+		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "cobblestone_pebble3"), COBBLESTONE_PIECE3);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "oak_splinter"), OAK_SPLINTER);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "birch_splinter"),BIRCH_SPLINTER);
 		Registry.register(Registry.PARTICLE_TYPE, new Identifier(MOD_ID, "spruce_splinter"), SPRUCE_SPLINTER);

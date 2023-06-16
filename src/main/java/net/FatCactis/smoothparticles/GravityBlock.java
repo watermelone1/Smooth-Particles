@@ -6,9 +6,9 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.text.Text;
 
 public class GravityBlock extends SpriteBillboardParticle {
+    Math2 random = new Math2<Float>();
     protected GravityBlock(ClientWorld level, double xCoord, double yCoord, double zCoord,
                               SpriteProvider spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
@@ -25,7 +25,9 @@ public class GravityBlock extends SpriteBillboardParticle {
         this.green = 1f;
         this.blue = 1f;
 
-        this.rotationDirection = Math2.getRandomInt(1, 2, -1, -2);
+
+
+        this.rotationDirection = (float) random.getRandom(1., 2., -1., -2.);
         //dont worry about this stupid
 
     }
@@ -47,7 +49,7 @@ public class GravityBlock extends SpriteBillboardParticle {
         this.green = 1f;
         this.blue = 1f;
 
-        this.rotationDirection = Math2.getRandomInt(1, 2, -1, -2);
+        this.rotationDirection = (float) random.getRandom(1, 2, -1, -2);
         //dont worry about this stupid
 
     }
