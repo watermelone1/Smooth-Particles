@@ -5,7 +5,6 @@ import net.FatCactis.smoothparticles.RandomMathStuffThatsCompletelyUselessAndIFe
 import net.FatCactis.smoothparticles.SmoothParticles;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.util.math.Vector3d;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.DefaultParticleType;
@@ -13,6 +12,7 @@ import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.joml.Vector3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -562,11 +562,14 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.VERDANT_FROGLIGHT, VERDANT_FROGLIGHT);
 		spawnBlockParticles(SmoothParticles.FROGLIGHT_MIDDLE, PEARLESCENT_FROGLIGHT);
 		spawnBlockParticles(SmoothParticles.PEARLESCENT_FROGLIGHT, PEARLESCENT_FROGLIGHT);
+
+		//1.20
+		spawnBlockParticles(SmoothParticles.CHERRY_BARK, CHERRY_WOOD);
 	}
 
 
 	private void spawnNoteBlockParticles() {
-		double rng = (double) math2.getRandomList(1, 2, 3, 4, 5);
+		double rng = Double.parseDouble(math2.getRandomList(1, 2, 3, 4, 5).toString());
 		if(bs.getBlock() == NOTE_BLOCK) {
 			for(int i = 0; i < 360; i++) {
 				if (i % 40 == 0) {

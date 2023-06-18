@@ -27,7 +27,7 @@ public class GravityBlock extends SpriteBillboardParticle {
 
 
 
-        this.rotationDirection = (float) random.getRandom(1., 2., -1., -2.);
+        this.rotationDirection = (float) random.getRandom(1f, 2f, -1f, -2f);
         //dont worry about this stupid
 
     }
@@ -49,7 +49,7 @@ public class GravityBlock extends SpriteBillboardParticle {
         this.green = 1f;
         this.blue = 1f;
 
-        this.rotationDirection = (float) random.getRandom(1, 2, -1, -2);
+        this.rotationDirection = (float) random.getRandom(1f, 2f, -1f, -2f);
         //dont worry about this stupid
 
     }
