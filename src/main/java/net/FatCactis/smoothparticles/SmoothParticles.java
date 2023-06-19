@@ -249,6 +249,9 @@ public class SmoothParticles implements ModInitializer {
 	public static final DefaultParticleType LIGHT_BLUE_CONCRETE = FabricParticleTypes.simple();
 	public static final DefaultParticleType SPORE_BLOSSOM = FabricParticleTypes.simple();
 	public static final DefaultParticleType WEATHERED_COPPER = FabricParticleTypes.simple();
+	public static final DefaultParticleType SOUL = FabricParticleTypes.simple();
+	public static final DefaultParticleType SEA_LANTERN = FabricParticleTypes.simple();
+	public static final DefaultParticleType END_STONE_BRICK = FabricParticleTypes.simple();
 
 	@Override
 	public void onInitialize() {
@@ -489,5 +492,8 @@ public class SmoothParticles implements ModInitializer {
 		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "spore_blossom"), SPORE_BLOSSOM);
 		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "weathered_copper"), WEATHERED_COPPER);
 		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "orange_concrete"), ORANGE_CONCRETE);
+		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "soul"), SOUL);
+		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "sea_lantern"), SEA_LANTERN);
+		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "end_stone_brick"), END_STONE_BRICK);
 	}
 }

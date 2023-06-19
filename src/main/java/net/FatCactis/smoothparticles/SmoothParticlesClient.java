@@ -212,6 +212,7 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.BLUE_GLAZED_TERRACOTTA, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.BROWN_GLAZED_TERRACOTTA, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.GRAY_GLAZED_TERRACOTTA, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.WHITE_GLAZED_TERRACOTTA, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.RED_GLAZED_TERRACOTTA, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.PINK_GLAZED_TERRACOTTA, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.GREEN_GLAZED_TERRACOTTA, GravityBlock.Factory::new);
@@ -247,5 +248,8 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPORE_BLOSSOM, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.WEATHERED_COPPER, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.BLACK_CONCRETE, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SOUL, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SEA_LANTERN, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.END_STONE_BRICK, GravityBlock.Factory::new);
     }
 }

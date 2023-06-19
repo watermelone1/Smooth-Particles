@@ -214,15 +214,6 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.MANGROVE_BARK, MANGROVE_WOOD);
 		spawnBlockParticles(SmoothParticles.CRIMSON_BARK, CRIMSON_HYPHAE);
 		spawnBlockParticles(SmoothParticles.WARPED_BARK, WARPED_HYPHAE);
-		spawnBlockParticles(SmoothParticles.OAK_LEAF, OAK_LEAVES);
-		spawnBlockParticles(SmoothParticles.BIRCH_LEAF, BIRCH_LEAVES);
-		spawnBlockParticles(SmoothParticles.SPRUCE_LEAF, SPRUCE_LEAVES);
-		spawnBlockParticles(SmoothParticles.JUNGLE_LEAF, JUNGLE_LEAVES);
-		spawnBlockParticles(SmoothParticles.ACACIA_LEAF, ACACIA_LEAVES);
-		spawnBlockParticles(SmoothParticles.DARK_OAK_LEAF, DARK_OAK_LEAVES);
-		spawnBlockParticles(SmoothParticles.MANGROVE_LEAF, MANGROVE_LEAVES);
-		spawnBlockParticles(SmoothParticles.AZALEA_LEAF, AZALEA_LEAVES);
-		spawnBlockParticles(SmoothParticles.AZALEA_LEAF, FLOWERING_AZALEA_LEAVES);
 		spawnBlockParticles(SmoothParticles.SPONGE_PIECE, SPONGE);
 		spawnBlockParticles(SmoothParticles.SPONGE_PIECE, WET_SPONGE);
 		wetSpongeParticle();
@@ -285,7 +276,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE2, MOSSY_COBBLESTONE_SLAB, 3);
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE3, MOSSY_COBBLESTONE_SLAB, 3);
 		spawnSlabParticles(SmoothParticles.GRASS_PIECE, MOSSY_COBBLESTONE_SLAB);
-		spawnSlabParticles(SmoothParticles.END_STONE_PIECE, END_STONE_BRICK_SLAB);
+		spawnSlabParticles(SmoothParticles.END_STONE_BRICK, END_STONE_BRICK_SLAB);
 		spawnSlabParticles(SmoothParticles.SANDSTONE_PEBBLE, SMOOTH_SANDSTONE_SLAB);
 		spawnSlabParticles(SmoothParticles.QUARTZ_PEBBLE, SMOOTH_QUARTZ_SLAB);
 		spawnSlabParticles(SmoothParticles.GRANITE_PEBBLE, GRANITE_SLAB);
@@ -322,6 +313,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.ICE_CUBE, PACKED_ICE);
 		spawnBlockParticles(SmoothParticles.ICE_CUBE, BLUE_ICE);
 		spawnSnowParticles(SmoothParticles.SNOWBALL, SNOW);
+		spawnBlockParticles(SmoothParticles.SNOWBALL, POWDER_SNOW, 10);
 		spawnBlockParticles(SmoothParticles.SNOWBALL, SNOW_BLOCK);
 		spawnBlockParticles(SmoothParticles.SLIMEBALL, SLIME_BLOCK);
 		spawnBlockParticles(SmoothParticles.CLAY_BALL, CLAY);
@@ -342,8 +334,8 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.NETHERRACK_PEBBLE, NETHERRACK);
 		spawnBlockParticles(SmoothParticles.PUMPKIN, CARVED_PUMPKIN);
 		spawnBlockParticles(SmoothParticles.PUMPKIN, JACK_O_LANTERN);
-		spawnBlockParticles(ParticleTypes.SOUL, SOUL_SOIL, new Vector3d(0.15, 0.15, 0.15));
-		spawnBlockParticles(ParticleTypes.SOUL, SOUL_SAND, new Vector3d(0.15, 0.15, 0.15));
+		spawnBlockParticles(SmoothParticles.SOUL, SOUL_SOIL);
+		spawnBlockParticles(SmoothParticles.SOUL, SOUL_SAND);
 		spawnBlockParticles(SmoothParticles.BASALT, BASALT);
 		spawnBlockParticles(SmoothParticles.BASALT, POLISHED_BASALT);
 		spawnBlockParticles(SmoothParticles.SMOOTH_BASALT, SMOOTH_BASALT);
@@ -378,8 +370,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.BRICK, BRICK_STAIRS);
 		spawnBlockParticles(SmoothParticles.STONE_PEBBLE, STONE_BRICK_STAIRS);
 		spawnBlockParticles(SmoothParticles.PACKED_MUD, MUD_BRICK_STAIRS);
-		spawnBlockParticles(SmoothParticles.MYCELIUM, MYCELIUM, 10);
-		spawnBlockParticles(SmoothParticles.DIRT_PEBBLE, MYCELIUM, 10);
+		spawnBlockParticles(SmoothParticles.MYCELIUM, MYCELIUM);
 		spawnBlockParticles(SmoothParticles.NETHER_BRICK, NETHER_BRICKS);
 		spawnBlockParticles(SmoothParticles.NETHER_BRICK, CRACKED_NETHER_BRICKS);
 		spawnBlockParticles(SmoothParticles.NETHER_BRICK, CHISELED_NETHER_BRICKS);
@@ -393,7 +384,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.END_STONE_PIECE, END_PORTAL_FRAME, 10);
 		spawnBlockParticles(SmoothParticles.DARK_PRISMARINE_PIECE, END_PORTAL_FRAME, 10);
 		spawnBlockParticles(SmoothParticles.END_STONE_PIECE, END_STONE);
-		spawnBlockParticles(SmoothParticles.END_STONE_PIECE, END_STONE_BRICKS);
+		spawnBlockParticles(SmoothParticles.END_STONE_BRICK, END_STONE_BRICKS);
 		spawnBlockParticles(SmoothParticles.SANDSTONE_PEBBLE, SANDSTONE_STAIRS);
 		spawnBlockParticles(SmoothParticles.OAK_SPLINTER, OAK_STAIRS);
 		spawnBlockParticles(SmoothParticles.SPRUCE_SPLINTER, SPRUCE_STAIRS);
@@ -423,7 +414,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.ANDESITE_PEBBLE, ANDESITE_WALL);
 		spawnBlockParticles(SmoothParticles.RED_NETHER_BRICK, RED_NETHER_BRICK_WALL);
 		spawnBlockParticles(SmoothParticles.SANDSTONE_PEBBLE	, SANDSTONE_WALL);
-		spawnBlockParticles(SmoothParticles.END_STONE_PIECE, END_STONE_BRICK_WALL);
+		spawnBlockParticles(SmoothParticles.END_STONE_BRICK, END_STONE_BRICK_WALL);
 		spawnBlockParticles(SmoothParticles.DIORITE_PEBBLE, DIORITE_WALL);
 		spawnBlockParticles(SmoothParticles.BLACKSTONE_PEBBLE, BLACKSTONE_WALL);
 		spawnBlockParticles(SmoothParticles.BLACKSTONE_PEBBLE, POLISHED_BLACKSTONE_WALL);
@@ -478,7 +469,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.PRISMARINE_PIECE, PRISMARINE_STAIRS);
 		spawnBlockParticles(SmoothParticles.PRISMARINE_PIECE, PRISMARINE_BRICK_STAIRS);
 		spawnBlockParticles(SmoothParticles.DARK_PRISMARINE_PIECE, DARK_PRISMARINE_STAIRS);
-		spawnBlockParticles(SmoothParticles.PRISMARINE_PIECE, SEA_LANTERN);
+		spawnBlockParticles(SmoothParticles.SEA_LANTERN, SEA_LANTERN);
 		spawnBlockParticles(SmoothParticles.RED_SANDSTONE, RED_SANDSTONE);
 		spawnBlockParticles(SmoothParticles.RED_SANDSTONE, CHISELED_RED_SANDSTONE);
 		spawnBlockParticles(SmoothParticles.RED_SANDSTONE, CUT_RED_SANDSTONE);
@@ -497,7 +488,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE1, MOSSY_COBBLESTONE_STAIRS, 4);
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE2, MOSSY_COBBLESTONE_STAIRS, 4);
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE3, MOSSY_COBBLESTONE_STAIRS, 4);
-		spawnBlockParticles(SmoothParticles.END_STONE_PIECE, END_STONE_BRICK_STAIRS);
+		spawnBlockParticles(SmoothParticles.END_STONE_BRICK, END_STONE_BRICK_STAIRS);
 		spawnBlockParticles(SmoothParticles.STONE_PEBBLE, STONE_STAIRS);
 		spawnBlockParticles(SmoothParticles.SANDSTONE_PEBBLE, SMOOTH_SANDSTONE_STAIRS);
 		spawnBlockParticles(SmoothParticles.QUARTZ_PEBBLE, SMOOTH_QUARTZ_STAIRS);
@@ -519,7 +510,7 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE1, MOSSY_COBBLESTONE_SLAB, 3);
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE2, MOSSY_COBBLESTONE_SLAB, 3);
 		spawnBlockParticles(SmoothParticles.COBBLESTONE_PIECE3, MOSSY_COBBLESTONE_SLAB, 3);
-		spawnSlabParticles(SmoothParticles.END_STONE_PIECE, END_STONE_BRICK_SLAB);
+		spawnSlabParticles(SmoothParticles.END_STONE_BRICK, END_STONE_BRICK_SLAB);
 		spawnSlabParticles(SmoothParticles.SANDSTONE_PEBBLE, SMOOTH_SANDSTONE_SLAB);
 		spawnSlabParticles(SmoothParticles.QUARTZ_PEBBLE, SMOOTH_QUARTZ_SLAB);
 		spawnSlabParticles(SmoothParticles.GRANITE_PEBBLE, GRANITE_SLAB);
@@ -559,7 +550,6 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.CHERRY_BARK, CHERRY_WOOD);
 		spawnBlockParticles(SmoothParticles.BAMBOO_BLOCK, BAMBOO_BLOCK);
 		spawnBlockParticles(SmoothParticles.BAMBOO_PLANKS, BAMBOO_PLANKS);
-		spawnBlockParticles(SmoothParticles.CHERRY_LEAF, CHERRY_LEAVES);
 		spawnBlockParticles(SmoothParticles.CHERRY_SPLINTER, CHERRY_PLANKS);
 		spawnBlockParticles(SmoothParticles.DEAD_CORAL, DEAD_BRAIN_CORAL_BLOCK);
 		spawnBlockParticles(SmoothParticles.DEAD_CORAL, DEAD_BUBBLE_CORAL_BLOCK);
