@@ -1,13 +1,10 @@
 package net.FatCactis.smoothparticles.mixin;
 
-import net.FatCactis.smoothparticles.GravityBlock;
-import net.FatCactis.smoothparticles.RandomMathStuffThatsCompletelyUselessAndIFeelLikeDyingBecauseIDontWantToCodeMoreParticlesAndDoUselessStuffThatWillTakeForeverAndImJustGoingToMakeAnotherClassThatExtendsThisOneJustBecauseIDontWantToTypeThisOutAndThisIsATerribleIdeaButIDontCare.Math2;
 import net.FatCactis.smoothparticles.SmoothParticles;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
@@ -22,9 +19,6 @@ import static net.minecraft.block.Blocks.*;
 
 @Mixin(Block.class)
 public class ParticleSpawning {
-
-	Math2<Integer> math2 = new Math2<Integer>();
-
 	BlockState bs;
 	BlockPos bp;
 	World w;
@@ -664,38 +658,38 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.MAGENTA_STRING, MAGENTA_BED);
 		spawnBlockParticles(SmoothParticles.PINK_STRING, PINK_BED);
 		spawnBlockParticles(SmoothParticles.SAND_PIECE, SUSPICIOUS_SAND);
-		spawnBlockParticles(SmoothParticles.GRAVEL_PIECE, SUSPICIOUS_GRAVEL);
+//		spawnBlockParticles(SmoothParticles.GRAVEL_PIECE, SUSPICIOUS_GRAVEL);
 	}
 
-	private void spawnNoteBlockParticles() {
-		double rng = Double.parseDouble(math2.getRandomList(1, 2, 3, 4, 5).toString());
-		if(bs.getBlock() == NOTE_BLOCK) {
-			for(int i = 0; i < 360; i++) {
-				if (i % 40 == 0) {
-					DefaultParticleType particle = SmoothParticles.WHOLE_NOTE;
-					if (rng == 1) {
-						particle = SmoothParticles.WHOLE_NOTE;
-					}
-					if (rng == 2) {
-						particle = SmoothParticles.HALF_NOTE;
-					}
-					if (rng == 3) {
-						particle = SmoothParticles.QUARTER_NOTE;
-					}
-					if (rng == 4) {
-						particle = SmoothParticles.EIGHTH_NOTE;
-					}
-					if (rng == 5) {
-						particle = SmoothParticles.BEAMED_EIGHTH_NOTE;
-					}
-					w.addParticle(particle,
-							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
-							Math.cos(i) * 0.25d, Math.sin(i) * 0.25d, Math.sin(i) * 0.25d);
-					rng = (double) math2.getRandomList(1, 2, 3, 4, 5);
-				}
-			}
-		}
-	}
+//	private void spawnNoteBlockParticles() {
+//		double rng = Double.parseDouble(math2.getRandomList(1, 2, 3, 4, 5).toString());
+//		if(bs.getBlock() == NOTE_BLOCK) {
+//			for(int i = 0; i < 360; i++) {
+//				if (i % 40 == 0) {
+//					DefaultParticleType particle = SmoothParticles.WHOLE_NOTE;
+//					if (rng == 1) {
+//						particle = SmoothParticles.WHOLE_NOTE;
+//					}
+//					if (rng == 2) {
+//						particle = SmoothParticles.HALF_NOTE;
+//					}
+//					if (rng == 3) {
+//						particle = SmoothParticles.QUARTER_NOTE;
+//					}
+//					if (rng == 4) {
+//						particle = SmoothParticles.EIGHTH_NOTE;
+//					}
+//					if (rng == 5) {
+//						particle = SmoothParticles.BEAMED_EIGHTH_NOTE;
+//					}
+//					w.addParticle(particle,
+//							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
+//							Math.cos(i) * 0.25d, Math.sin(i) * 0.25d, Math.sin(i) * 0.25d);
+//					rng = (double) math2.getRandomList(1, 2, 3, 4, 5);
+//				}
+//			}
+//		}
+//	}
 
 	private void spawnSlabParticles(ParticleEffect particleEffect, Block block) {
 		if(bs.getBlock() == block) {
@@ -750,14 +744,14 @@ public class ParticleSpawning {
 		}
 	}
 
-	private void spawnBlockParticles(ParticleEffect particle, Block block, float scale) {
-		if (bs.getBlock() == block) {
-			GravityBlock gb = ((GravityBlock) particle);
-			gb.setScale(scale);
-			particle = ((ParticleEffect) gb);
-		}
-		spawnBlockParticles(particle, block);
-	}
+//	private void spawnBlockParticles(ParticleEffect particle, Block block, float scale) {
+//		if (bs.getBlock() == block) {
+//			GravityBlock gb = ((GravityBlock) particle);
+//			gb.setScale(scale);
+//			particle = ((ParticleEffect) gb);
+//		}
+//		spawnBlockParticles(particle, block);
+//	}
 
 	private void wetSpongeParticle() {
 		if(bs.getBlock() == WET_SPONGE) {
@@ -781,28 +775,28 @@ public class ParticleSpawning {
 		}
 	}
 
-	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, float scale) {
-		if (bs.getBlock() == block) {
-			GravityBlock gb = ((GravityBlock) particle);
-			gb.setScale(scale);
-			particle = ((ParticleEffect) gb);
-		}
+//	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, float scale) {
+//		if (bs.getBlock() == block) {
+//			GravityBlock gb = ((GravityBlock) particle);
+//			gb.setScale(scale);
+//			particle = ((ParticleEffect) gb);
+//		}
+//
+//
+//		spawnBlockParticles(particle, block, num);
+//	}
 
-
-		spawnBlockParticles(particle, block, num);
-	}
-
-	private void spawnBlockParticles(ParticleEffect particle, Block block, Vector3d vector3d) {
-		if(bs.getBlock() == block) {
-			for(int i = 0; i < 360; i++) {
-				if (i % 20 == 0) {
-					w.addParticle(particle,
-							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
-							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
-				}
-			}
-		}
-	}
+//	private void spawnBlockParticles(ParticleEffect particle, Block block, Vector3d vector3d) {
+//		if(bs.getBlock() == block) {
+//			for(int i = 0; i < 360; i++) {
+//				if (i % 20 == 0) {
+//					w.addParticle(particle,
+//							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
+//							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
+//				}
+//			}
+//		}
+//	}
 
 	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, Vector3d vector3d) {
 		if(bs.getBlock() == block) {
@@ -815,19 +809,19 @@ public class ParticleSpawning {
 			}
 		}
 	}
-	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, Vector3d vector3d, float scale) {
-		GravityBlock gb = (GravityBlock) particle;
-		gb.setScale(0.5F);
-		if(bs.getBlock() == block) {
-			for(int i = 0; i < 360; i++) {
-				if (i % 360/num == 0) {
-					w.addParticle((ParticleEffect) gb,
-							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
-							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
-				}
-			}
-		}
-	}
+//	private void spawnBlockParticles(ParticleEffect particle, Block block, int num, Vector3d vector3d, float scale) {
+//		GravityBlock gb = (GravityBlock) particle;
+//		gb.setScale(0.5F);
+//		if(bs.getBlock() == block) {
+//			for(int i = 0; i < 360; i++) {
+//				if (i % 360/num == 0) {
+//					w.addParticle((ParticleEffect) gb,
+//							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
+//							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
+//				}
+//			}
+//		}
+//	}
 
 
 }
