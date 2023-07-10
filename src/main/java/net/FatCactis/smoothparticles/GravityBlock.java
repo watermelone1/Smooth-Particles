@@ -8,7 +8,7 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 
 public class GravityBlock extends SpriteBillboardParticle {
-    Math2 random = new Math2<Float>();
+    Math2<Float> random = new Math2<>();
     protected GravityBlock(ClientWorld level, double xCoord, double yCoord, double zCoord,
                               SpriteProvider spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
@@ -32,28 +32,6 @@ public class GravityBlock extends SpriteBillboardParticle {
 
     }
 
-    protected GravityBlock(ClientWorld level, double xCoord, double yCoord, double zCoord,
-                           SpriteProvider spriteSet, double xd, double yd, double zd, float scale) {
-        super(level, xCoord, yCoord, zCoord, xd, yd, zd);
-
-        this.velocityMultiplier = 0.9F;
-        this.x = xd * 1.25;
-        this.y = yd * 1.25;
-        this.z = zd * 1.25;
-        this.scale *= 0.75F;
-        this.maxAge = 25;
-        this.setSpriteForAge(spriteSet);
-        this.scale = 0.5F;
-
-        this.red = 1f;
-        this.green = 1f;
-        this.blue = 1f;
-
-        this.rotationDirection = (float) random.getRandom(1f, 2f, -1f, -2f);
-        //dont worry about this stupid
-
-    }
-
     @Override
     public void tick() {
         super.tick();
@@ -62,20 +40,19 @@ public class GravityBlock extends SpriteBillboardParticle {
         fadeOut();
     }
 
-    private float rotationDirection;
+    private final float rotationDirection;
 
-    private void rotate() {
+    protected void rotate() {
         if (!this.onGround) {this.angle += this.rotationDirection/40;}
             this.prevAngle = this.angle;
 
     }
 
-    private void move() {
+    void move() {
         velocityY = velocityY - 0.012;
     }
 
-    private void fadeOut() {
-        this.alpha = (easeOut(this.age, 0, 1, this.maxAge));
+    void fadeOut() {
         this.alpha = (float) Math2.flipAroundNumber(easeOut(this.age, this.maxAge), 0.5);
     }
 
@@ -87,10 +64,6 @@ public class GravityBlock extends SpriteBillboardParticle {
         return (t/=d)*t;
     }
 
-    public void setScale (float scale) {
-        this.scale = scale;
-    }
-
     @Override
     public ParticleTextureSheet getType() {
         return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
@@ -98,7 +71,7 @@ public class GravityBlock extends SpriteBillboardParticle {
 
     @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleFactory<DefaultParticleType> {
-        private final SpriteProvider sprites;
+        final SpriteProvider sprites;
 
         public Factory(SpriteProvider spriteSet) {
             this.sprites = spriteSet;
@@ -107,11 +80,6 @@ public class GravityBlock extends SpriteBillboardParticle {
         public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
                                        double dx, double dy, double dz) {
             return new GravityBlock(level, x, y, z, this.sprites, dx, dy, dz);
-        }
-
-        public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
-                                       double dx, double dy, double dz, float scale) {
-            return new GravityBlock(level, x, y, z, this.sprites, dx, dy, dz, scale);
         }
     }
 }

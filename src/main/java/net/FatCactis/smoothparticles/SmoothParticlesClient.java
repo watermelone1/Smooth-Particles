@@ -3,10 +3,6 @@ package net.FatCactis.smoothparticles;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.minecraft.client.particle.*;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.screen.PlayerScreenHandler;
-import net.minecraft.util.Identifier;
 
 public class SmoothParticlesClient implements ClientModInitializer  {
 
@@ -78,14 +74,14 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.MANGROVE_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.CRIMSON_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.WARPED_BARK, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.OAK_LEAF, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_LEAF, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPRUCE_LEAF, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.JUNGLE_LEAF, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.ACACIA_LEAF, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.DARK_OAK_LEAF, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.MANGROVE_LEAF, GravityBlock.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.AZALEA_LEAF, GravityBlock.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.OAK_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPRUCE_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.JUNGLE_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.ACACIA_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.DARK_OAK_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.MANGROVE_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.AZALEA_LEAF, LeafParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPONGE_PIECE, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.GLASS_SHARD, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SANDSTONE_PEBBLE, GravityBlock.Factory::new);

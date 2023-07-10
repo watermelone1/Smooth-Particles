@@ -658,6 +658,15 @@ public class ParticleSpawning {
 		spawnBlockParticles(SmoothParticles.MAGENTA_STRING, MAGENTA_BED);
 		spawnBlockParticles(SmoothParticles.PINK_STRING, PINK_BED);
 		spawnBlockParticles(SmoothParticles.SAND_PIECE, SUSPICIOUS_SAND);
+
+		spawnBlockParticles(SmoothParticles.OAK_LEAF, OAK_LEAVES);
+		spawnBlockParticles(SmoothParticles.SPRUCE_LEAF, SPRUCE_LEAVES);
+		spawnBlockParticles(SmoothParticles.BIRCH_LEAF, BIRCH_LEAVES);
+		spawnBlockParticles(SmoothParticles.JUNGLE_LEAF, JUNGLE_LEAVES);
+		spawnBlockParticles(SmoothParticles.ACACIA_LEAF, ACACIA_LEAVES);
+		spawnBlockParticles(SmoothParticles.DARK_OAK_LEAF, DARK_OAK_LEAVES);
+		spawnBlockParticles(SmoothParticles.MANGROVE_LEAF, MANGROVE_LEAVES);
+		spawnBlockParticles(SmoothParticles.AZALEA_LEAF, AZALEA_LEAVES);
 //		spawnBlockParticles(SmoothParticles.GRAVEL_PIECE, SUSPICIOUS_GRAVEL);
 	}
 
@@ -802,6 +811,7 @@ public class ParticleSpawning {
 		if(bs.getBlock() == block) {
 			for(int i = 0; i < 360; i++) {
 				if (i % 360/num == 0) {
+
 					w.addParticle(particle,
 							bp.getX() + Math.random(), bp.getY() + Math.random(), bp.getZ() + Math.random(),
 							(Math.random() - 0.5) * 0.25d * vector3d.x, (Math.random() - 0.5) * 0.25d * vector3d.y, (Math.random() - 0.5) * 0.25d * vector3d.z);
