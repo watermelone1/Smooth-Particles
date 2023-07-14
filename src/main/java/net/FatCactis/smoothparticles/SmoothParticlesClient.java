@@ -75,7 +75,7 @@ public class SmoothParticlesClient implements ClientModInitializer  {
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.CRIMSON_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.WARPED_BARK, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.OAK_LEAF, LeafParticle.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_LEAF, LeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(SmoothParticles.BIRCH_LEAF, GravityBlock.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.SPRUCE_LEAF, LeafParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.JUNGLE_LEAF, LeafParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(SmoothParticles.ACACIA_LEAF, LeafParticle.Factory::new);
