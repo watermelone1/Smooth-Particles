@@ -1,16 +1,17 @@
 package net.FatCactis.smoothparticles;
 
+import eu.midnightdust.lib.config.MidnightConfig;
+import net.FatCactis.smoothparticles.config.ConfigManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class SmoothParticles implements ModInitializer {
 	public static final String MOD_ID = "smoothparticles";
+
 
 	public static final DefaultParticleType SAUL = FabricParticleTypes.simple();
 
@@ -255,6 +256,8 @@ public class SmoothParticles implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		MidnightConfig.init(MOD_ID, ConfigManager.class);
+
 		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "angry"), ANGRY);
 		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "enchanted_hit"), ENCH_HIT);
 		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "flame"), FLAME);
