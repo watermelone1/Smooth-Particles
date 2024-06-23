@@ -20,7 +20,7 @@ This mod works on the client side which means you can play all your favorite ser
 
  
 
-For questions ask me on discord at watermalone1#0001 or on GitHub by submitting an issue
+For questions ask me on discord at watermalone1 or on GitHub by submitting an issue
 
  
 
