@@ -1,6 +1,6 @@
 This repository is deprecated. Visit https://github.com/watermelone1/SmoothParticles for the most recent versions
 
-# Smooth-Particles
+# Smooth Particles
 
 This mod adds the functionality to spawn particles when you place a block allowing a much smoother experience
 
